@@ -21,11 +21,6 @@
     "react-hook-form": "^7.45.4",
     "react-table": "^7.8.0"
   },
-  scripts{
-"dev": "vite",
-"build": "vite build",
-"preview": "vite preview"
-},
   "devDependencies": {
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
