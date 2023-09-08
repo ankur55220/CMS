@@ -6,6 +6,7 @@ import Signup from './pages/Register/Signup'
 import Dashboard from './pages/Dashboard/Dashboard'
 import './App.css'
 import Wrapper from './components/Wrapper/Wrapper'
+import Notfound from './components/Notfound'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="*" element={<Notfound />} />
         
          
         

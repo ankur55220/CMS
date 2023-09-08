@@ -187,6 +187,8 @@ function Wrapper({type}) {
       <div className='test'>
 
         <div className="wrapper">
+
+          <h1 style={{textAlign:"center"}}>CMS</h1>
        
         <form onSubmit={handleSubmit(onSubmit)} style={{marginBottom:"1rem"}}>
         <CustomInput register={register} name="username" placeholder={"USERNAME"} err={exp}/>
