@@ -491,6 +491,25 @@ const fileError={
 
     navigate("/")
   }
+
+
+  function AddEmployee(){
+    setSelect((old)=>{
+      return {
+          ...old,
+          [old.MCA]:false,
+          [old.BCA]:false,
+          [old.MSC]:false
+
+      }
+  })
+
+  setCheck("sales")
+  setValue("name","")
+  setValue("email","")
+  setValue("mobile_no","")
+  setOpen(true)
+  }
   
   if(window.localStorage.getItem("login")){
 
@@ -499,7 +518,7 @@ const fileError={
       <div className="adminInfo" style={{display:"flex",alignItems:"center"}}>{window.localStorage.getItem("login")}&nbsp;&nbsp;&nbsp;<Button color="primary" onClick={logout}>LOGUT</Button></div>
       <div className="addAndSearch">
       <Stack direction="row" spacing={2}>
-         <Button size="small" variant="contained" color="primary" onClick={()=>{setOpen(true)}}>Add Employee</Button>
+         <Button sx={{cursor:"pointer"}} size="small" variant="contained" color="primary" onClick={AddEmployee}>Add Employee</Button>
 
          <div className="inputDiv">
             <input value={globalFilter || ""} onChange={(e)=>{setGlobalFilter(e.target.value)}} type="text" placeholder="Search" />

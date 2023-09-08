@@ -136,7 +136,7 @@ function Wrapper({type}) {
           navigate("/")
 
         }
-      },10000)
+      },500)
      
       
       

@@ -64,4 +64,5 @@ tr:nth-child(even) {
 .var{
     background-color:#B22222;
     margin-left:0.5rem;
+    cursor:pointer;
 }

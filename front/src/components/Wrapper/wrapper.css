@@ -42,4 +42,5 @@ input[type="text"]{
     box-shadow: 1px 0.5px #888888;
     background-color:#1F456E;
     color:#ffffff;
+    cursor:pointer;
 }
