@@ -7,6 +7,8 @@ import EmployeeList from "../../components/EmployeeList/EmployeeList";
 import { useForm } from "react-hook-form";
 import CustomInput from "../../components/Input/CustomInput";
 import { useNavigate } from "react-router-dom";
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from "@emotion/react";
 //mui dialog box
 
 import Button from "@mui/material/Button";
@@ -59,6 +61,10 @@ function Dashboard() {
         handleSubmit,
         setValue
       } = useForm();
+
+
+
+     
 
 
  useEffect(()=>{
@@ -637,7 +643,14 @@ const fileError={
 
 
         
-        <Dialog open={open} onClose={handleClose}>
+        <Dialog open={open} onClose={handleClose} sx={{
+      "& .MuiDialog-container": {
+        "& .MuiPaper-root": {
+          width: "100%",
+          maxWidth: "500px",  // Set your width here
+        },
+      },
+    }}  >
           <DialogTitle id="alert-dialog-title">
             {"Add new employee"}
           </DialogTitle>
@@ -781,8 +794,8 @@ const fileError={
                 />
 
               <div><ErrorMessage errors={errors} name="filename" /></div>
-               <div>
-               <button type="submit">{isUpdate?"update member":"Add member"}</button>
+               <div style={{marginTop:"1rem"}}>
+               <button class="generalButton" type="submit">{isUpdate?"update member":"Add member"}</button>
 
                </div>
 
